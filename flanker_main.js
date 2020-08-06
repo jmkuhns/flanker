@@ -82,6 +82,9 @@ var test = {
   }
 };
 
+jsPsych.data.addProperties({
+  subject:  var sub_id = "${l://SurveySessionID}";
+});
 
 /*defining debriefing block*/
 
