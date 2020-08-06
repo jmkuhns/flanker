@@ -2,18 +2,22 @@
 <html>
     <head>
         <title>My experiment</title>
-        <script src="/Users/jackkuhns/Documents/GitHub/flanker/js/jspsych/jspsych.js"></script>
-        <script src="/Users/jackkuhns/Documents/GitHub/flanker/jspsych-html-keyboard-response.js" charset="utf-8"></script>
-        <link href="jspsych.css" rel="stylesheet" type="text/css">
+        <script src="jspsych-6.1.0/jspsych.js"></script>
+  <script src="jspsych-6.1.0/plugins/jspsych-html-keyboard-response.js"></script>
+  <link href="jspsych-6.1.0/css/jspsych.css" rel="stylesheet" type="text/css"></link>
     </head>
-    <body></body>
+    <body>
+<div id="jspsych-target">
+
+</div>
+    </body>
 
     <script>
   var hello_trial = {
       type: 'html-keyboard-response',
       stimulus: 'Hello world!'
   };
-  
+
   jsPsych.init({
        timeline: [hello_trial],
        display_element: 'jspsych-target'
