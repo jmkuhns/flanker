@@ -110,6 +110,9 @@ var incongruent_rt = Math.round(jsPsych.data.get().filter({
 Qualtrics.SurveyEngine.setEmbeddedData("accuracy", accuracy);
 Qualtrics.SurveyEngine.setEmbeddedData("congruent_rt", congruent_rt);
 Qualtrics.SurveyEngine.setEmbeddedData("incongruent_rt", incongruent_rt);
+
+Qualtrics.SurveyEngine.setEmbeddedData("flanker_raw", jsPsych.data.get().values());
+
     return "thanks dude"
 
     //"<p>You responded correctly on <strong>"+accuracy+"%</strong> of the trials.</p> " +
