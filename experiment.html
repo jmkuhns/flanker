@@ -9,14 +9,16 @@
     <body></body>
 
     <script>
-      var hello_trial = {
+  var hello_trial = {
       type: 'html-keyboard-response',
       stimulus: 'Hello world!'
-  }
-
+  };
+  
   jsPsych.init({
-      timeline: [hello_trial]
-  })
+       timeline: [hello_trial],
+       display_element: 'jspsych-target'
+   });
+
 
     </script>
 
