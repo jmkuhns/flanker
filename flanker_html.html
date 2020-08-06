@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flanker Task</title>
+				<script src="https://jmkuhns.github.io/jsPsych/jspsych.js"></script>
+				<script src="https://jmkuhns.github.io/jsPsych/plugins/jspsych-html-keyboard-response.js"></script>
+				<script src="https://jmkuhns.github.io/jsPsych/jquery-3.5.1.min.js"></script>
+				<link href="https://jmkuhns.github.io/jsPsych/css/jspsych.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+    </body>
+    <script>
+
+        /*start experiment*/
+        jsPsych.init({
+            timeline: timeline,
+            on_finish: function() {
+                jsPsych.data.displayData();
+            }
+        });
+    </script>
+</html>
