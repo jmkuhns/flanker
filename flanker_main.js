@@ -91,10 +91,25 @@ jsPsych.data.addProperties({
 var debrief = {
   type: "html-keyboard-response",
   stimulus: function() {
-    //var total_trials = jsPsych.data.get().filter({trial_type: 'html-keyboard-response'}).count();
-    //var accuracy = Math.round(jsPsych.data.get().filter({correct: true}).count() / total_trials * 100);
-    //var congruent_rt = Math.round(jsPsych.data.get().filter({correct: true, stim_type: 'congruent'}).select('rt').mean());
-    //var incongruent_rt = Math.round(jsPsych.data.get().filter({correct: true, stim_type: 'incongruent'}).select('rt').mean());
+    var total_trials = jsPsych.data.get().filter({
+    trial_type: 'image-keyboard-response'
+}).count();
+var accuracy = Math.round(jsPsych.data.get().filter({
+    correct: true
+}).count() / total_trials * 100);
+var congruent_rt = Math.round(jsPsych.data.get().filter({
+    correct: true,
+    stim_type: 'congruent'
+}).select('rt').mean());
+var incongruent_rt = Math.round(jsPsych.data.get().filter({
+    correct: true,
+    stim_type: 'incongruent'
+}).select('rt').mean());
+
+// save to qualtrics embedded data
+Qualtrics.SurveyEngine.setEmbeddedData("accuracy", accuracy);
+Qualtrics.SurveyEngine.setEmbeddedData("congruent_rt", congruent_rt);
+Qualtrics.SurveyEngine.setEmbeddedData("incongruent_rt", incongruent_rt);
     return "thanks dude"
 
     //"<p>You responded correctly on <strong>"+accuracy+"%</strong> of the trials.</p> " +
