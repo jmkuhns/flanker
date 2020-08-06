@@ -1,9 +1,9 @@
 <!-- CHANGE 1: Using the GitHub-hosted files -->
 
-<script src="https://jmkuhns.github.io/jsPsych/jspsych.js"></script>
-<script src="https://jmkuhns.github.io/jsPsych/plugins/jspsych-html-keyboard-response.js"></script>
-<script src="https://jmkuhns.github.io/jsPsych/jquery-3.5.1.min.js"></script>
-<link href="https://jmkuhns.github.io/jsPsych/css/jspsych.css" rel="stylesheet" type="text/css" />
+<script src="https://jmkuhns.github.io/flanker/js/jspsych.js"></script>
+<script src="https://jmkuhns.github.io/flanker//jspsych-html-keyboard-response.js"></script>
+<script src="https://jmkuhns.github.io/flanker/js/jsPsych/jquery-3.5.1.min.js"></script>
+<link href="https://jmkuhns.github.io/flanker//jspsych.css" rel="stylesheet" type="text/css" />
 <!-- CHANGE 2: Loading the main experiment script in the same folder-->
 
 <script src="https://jmkuhns.github.io/flanker/flanker_main.js"></script>
