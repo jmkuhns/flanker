@@ -5,8 +5,8 @@
 <script src="https://jmkuhns.github.io/flanker/js/jsPsych/jquery-3.5.1.min.js"></script>
 <link href="https://jmkuhns.github.io/flanker/jspsych.css" rel="stylesheet" type="text/css" />
 <!-- CHANGE 2: Loading the main experiment script in the same folder-->
-
 <script src="https://jmkuhns.github.io/flanker/flanker_main.js"></script>
+
 
 /*set up welcome block*/
 var welcome = {
@@ -91,14 +91,16 @@ jsPsych.data.addProperties({
 var debrief = {
   type: "html-keyboard-response",
   stimulus: function() {
-    var total_trials = jsPsych.data.get().filter({trial_type: 'html-keyboard-response'}).count();
-    var accuracy = Math.round(jsPsych.data.get().filter({correct: true}).count() / total_trials * 100);
-    var congruent_rt = Math.round(jsPsych.data.get().filter({correct: true, stim_type: 'congruent'}).select('rt').mean());
-    var incongruent_rt = Math.round(jsPsych.data.get().filter({correct: true, stim_type: 'incongruent'}).select('rt').mean());
-    return "<p>You responded correctly on <strong>"+accuracy+"%</strong> of the trials.</p> " +
-    "<p>Your average response time for congruent trials was <strong>" + congruent_rt + "ms</strong>.</p>"+
-    "<p>Your average response time for incongruent trials was <strong>" + incongruent_rt + "ms</strong>.</p>"+
-    "<p>Press any key to complete the experiment. Thank you!</p>";
+    //var total_trials = jsPsych.data.get().filter({trial_type: 'html-keyboard-response'}).count();
+    //var accuracy = Math.round(jsPsych.data.get().filter({correct: true}).count() / total_trials * 100);
+    //var congruent_rt = Math.round(jsPsych.data.get().filter({correct: true, stim_type: 'congruent'}).select('rt').mean());
+    //var incongruent_rt = Math.round(jsPsych.data.get().filter({correct: true, stim_type: 'incongruent'}).select('rt').mean());
+    return "thanks dude"
+
+    //"<p>You responded correctly on <strong>"+accuracy+"%</strong> of the trials.</p> " +
+    //"<p>Your average response time for congruent trials was <strong>" + congruent_rt + "ms</strong>.</p>"+
+    //"<p>Your average response time for incongruent trials was <strong>" + incongruent_rt + "ms</strong>.</p>"+
+    //"<p>Press any key to complete the experiment. Thank you!</p>";
   }
 };
 
