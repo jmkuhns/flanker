@@ -1,10 +1,9 @@
 <!-- CHANGE 1: Using the GitHub-hosted files -->
-<script src="https://cdn.jsdelivr.net/gh/kywch/jsPsych-in-Qualtrics/flanker/jspsych-6.1.0/jspsych.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/kywch/jsPsych-in-Qualtrics/flanker/jspsych-6.1.0/plugins/jspsych-html-keyboard-response.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/kywch/jsPsych-in-Qualtrics/flanker/jspsych-6.1.0/plugins/jspsych-image-keyboard-response.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kywch/jsPsych-in-Qualtrics/flanker/jspsych-6.1.0/css/jspsych.css">
+<script src="https://jmkuhns.github.io/flanker/jspsych-6-2/jspsych.js" charset="utf-8"></script>
+<script src="https://jmkuhns.github.io/flanker/jspsych-6-2/plugins/jspsych-html-keyboard-response.js" charset="utf-8"></script>
+<link rel="stylesheet" href="https://jmkuhns.github.io/flanker/jspsych-6-2/css/jspsych.css">
 <!-- CHANGE 2: Loading the main experiment script in the same folder-->
-<script src="flanker_main.js"></script>
+<script src="https://jmkuhns.github.io/flanker/flanker_main.js"></script>
 
 // Use JSDELIVR to get the files from a GitHub repository
 // https://cdn.jsdelivr.net/gh/<github-username>/<repository-name>/<specific folder or file>
