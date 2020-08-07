@@ -23,6 +23,17 @@ var welcome = {
 /*set up instructions block*/
 var instructions = {
   type: "html-keyboard-response",
+  stimulus:
+  "<p> In this task, there will be a plus sign (+) in the center of the screen.</p>"
+  "<p> It is very important that you try to keep your eyes on the plus sign throughout the experiment.</p>""
+  "<p> Your goal in this experiment is to decide which direction an arrow is pointing. <br> The arrows will appear above the plus sign.  However, you should still try not to move your eyes from the plus sign.</p>"
+
+
+
+
+Please click the mouse to continue.
+
+
   stimulus: "<p>In this task, you will see five arrows on the screen, like the example below.</p>" +
     "<img src='" + repo_site + "img/inc1.png'></img>" +
     "<p>Press the left arrow key if the middle arrow is pointing left. (<)</p>" +
