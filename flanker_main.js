@@ -8,7 +8,7 @@
 
 // Use JSDELIVR to get the files from a GitHub repository
 // https://cdn.jsdelivr.net/gh/<github-username>/<repository-name>/<specific folder or file>
-var repo_site = "https://cdn.jsdelivr.net/gh/kywch/jsPsych-in-Qualtrics/flanker/";
+var repo_site = "https://cdn.jsdelivr.net/gh/kywch/jsPsych-in-Qualtrics/flanker/ArrowFlankerBitmaps";
 
 
 /* experiment parameters */
@@ -27,7 +27,7 @@ var instructions = {
   "<p> In this task, there will be a plus sign (+) in the center of the screen.</p>"
   "<p> It is very important that you try to keep your eyes on the plus sign throughout the experiment.</p>""
   "<p> Your goal in this experiment is to decide which direction an arrow is pointing. <br> The arrows will appear above the plus sign.  However, you should still try not to move your eyes from the plus sign.</p>"
-
+  "<p> Please press enter to continue </p>"
 
 
 
