@@ -34,11 +34,12 @@ var instructions2 = {
     "<p>Press any key to begin.</p>",
   post_trial_gap: 1000
 };
+timeline.push(instructions, instructions2);
 
 /*defining stimuli*/
 var test_stimuli = [
   {
-    stimulus: flanker_bitmaps + "RH.bmp"
+    stimulus: flanker_bitmaps + "RH.bmp",
     data: { stim_type: 'congruent', direction: 'right'}
   },
   {
