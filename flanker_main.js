@@ -2,7 +2,8 @@
 // https://cdn.jsdelivr.net/gh/<github-username>/<repository-name>/<specific folder or file>
 //var repo_site = "https://cdn.jsdelivr.net/gh/kywch/jsPsych-in-Qualtrics/flanker/ArrowFlankerBitmaps";
 //var repo_site = "https://jmkuhns.github.io/flanker/";
-var flanker_bitmaps = "https://cdn.jsdelivr.net/gh/jmkuhns/flanker/ArrowFlankerBitmaps";
+var timeline = [];
+var flanker_bitmaps = "https://jmkuhns.github.io/flanker/ArrowFlankersBitmaps";
 
 
 /* experiment parameters */
@@ -13,7 +14,7 @@ var welcome = {
   type: "html-keyboard-response",
   stimulus: "Welcome to the experiment. Press any key to begin."
 };
-
+timeline.push(welcome);
 /*set up instructions block*/
 var instructions = {
   type: "html-keyboard-response",
@@ -85,6 +86,7 @@ var test = {
   timeline_variables: test_stimuli,
   sample: {type: 'fixed-repetitions', size: reps_per_trial_type}
 };
+timeline.push(test);
 
 /*defining debriefing block*/
 var debrief = {
@@ -102,8 +104,5 @@ var debrief = {
 };
 
 /*set up experiment structure*/
-var timeline = [];
-timeline.push(welcome);
-timeline.push(instructions);
-timeline.push(test);
+
 timeline.push(debrief);
