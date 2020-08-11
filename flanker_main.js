@@ -1,9 +1,8 @@
 <!-- CHANGE 1: Using the GitHub-hosted files -->
 <script src="https://jmkuhns.github.io/flanker/jspsych-6-2/jspsych.js" charset="utf-8"></script>
 <script src="https://jmkuhns.github.io/flanker/jspsych-6-2/plugins/jspsych-html-keyboard-response.js" charset="utf-8"></script>
+<script src = "https://jmkuhns.github.io/flanker/jspsych-6-2/plugins/jspsych-image-keyboard-response.js"></script>
 <link rel="stylesheet" href="https://jmkuhns.github.io/flanker/jspsych-6-2/css/jspsych.css">
-<!-- CHANGE 2: Loading the main experiment script in the same folder-->
-<script src="https://jmkuhns.github.io/flanker/flanker_main.js"></script>
 
 // Use JSDELIVR to get the files from a GitHub repository
 // https://cdn.jsdelivr.net/gh/<github-username>/<repository-name>/<specific folder or file>
@@ -30,7 +29,8 @@ var instructions = {
   "<p> Please press enter to continue </p>"
 
 
-  stimulus: "<p>In this task, you will see five arrows on the screen, like the example below.</p>" +
+  stimulus:
+   "<p>In this task, you will see five arrows on the screen, like the example below.</p>" +
     "<img src='" + flanker_bitmaps + "L.bmp'></img>" +
     "<p>Press the left arrow key if the middle arrow is pointing left. (<)</p>" +
     "<p>Press the right arrow key if the middle arrow is pointing right. (>)</p>" +
