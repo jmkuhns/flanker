@@ -49,16 +49,18 @@
 
     </body>
 <!-- end copy to qualtrics -->
-    
+
     <script>
 
 
         /*start experiment*/
         jsPsych.init({
-            timeline: timeline,
-            on_finish: function() {
-                jsPsych.data.displayData();
-            }
+          timeline: timeline,
+          /* Change 1: Using `display_element` */
+          display_element: 'display_stage',
+          on_finish: function () {
+            jsPsych.data.displayData();
+          }
         });
     </script>
 </html>
