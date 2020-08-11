@@ -29,12 +29,8 @@ var instructions = {
   "<p> Please press enter to continue </p>"
 
 
-
-Please click the mouse to continue.
-
-
   stimulus: "<p>In this task, you will see five arrows on the screen, like the example below.</p>" +
-    "<img src='" + repo_site + "img/inc1.png'></img>" +
+    "<img src='" + repo_site + "L.bmp'></img>" +
     "<p>Press the left arrow key if the middle arrow is pointing left. (<)</p>" +
     "<p>Press the right arrow key if the middle arrow is pointing right. (>)</p>" +
     "<p>Press any key to begin.</p>",
@@ -44,20 +40,28 @@ Please click the mouse to continue.
 /*defining stimuli*/
 var test_stimuli = [
   {
-    stimulus: repo_site + "img/con1.png",
-    data: { stim_type: 'congruent', direction: 'left'}
-  },
-  {
-    stimulus: repo_site + "img/con2.png",
+    stimulus: repo_site + "RH.bmp"
     data: { stim_type: 'congruent', direction: 'right'}
   },
   {
-    stimulus: repo_site + "img/inc1.png",
+    stimulus: repo_site + "LH.bmp",
+    data: { stim_type: 'congruent', direction: 'left'}
+  },
+  {
+    stimulus: repo_site + "LRL.bmp",
     data: { stim_type: 'incongruent', direction: 'right'}
   },
   {
-    stimulus: repo_site + "img/inc2.png",
+    stimulus: repo_site + "RLR.bmp",
     data: { stim_type: 'incongruent', direction: 'left'}
+  },
+  {
+    stimulus: repo_site + "dotL.bmp",
+    data: { stim_type: 'neutral', direction: 'left'}
+  },
+  {
+    stimulus: repo_site + "dotR.bmp",
+    data: { stim_type: 'neutral', direction: 'right'}
   }
 ];
 
