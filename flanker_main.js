@@ -5,7 +5,6 @@
 var timeline = [];
 var flanker_bitmaps = "https://jmkuhns.github.io/flanker/ArrowFlankersBitmaps";
 
-
 /* experiment parameters */
 var reps_per_trial_type = 4;
 
@@ -23,8 +22,10 @@ var instructions = {
   "<p> It is very important that you try to keep your eyes on the plus sign throughout the experiment.</p>"+
   "<p> Your goal in this experiment is to decide which direction an arrow is pointing. <br> The arrows will appear above the plus sign.  However, you should still try not to move your eyes from the plus sign.</p>"+
   "<p> Please press enter to continue </p>",
-
-
+  post_trial_gap: 1000
+};
+var instructions2 = {
+  type: "html-keyboard-response",
   stimulus:
    "<p>In this task, you will see five arrows on the screen, like the example below.</p>" +
     "<img src='" + flanker_bitmaps + "L.bmp'></img>" +
