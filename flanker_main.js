@@ -1,9 +1,3 @@
-<!-- CHANGE 1: Using the GitHub-hosted files -->
-<script src="https://cdn.jsdelivr.net/gh/jmkuhns/flanker/jspsych-6-2/jspsych.js" charset="utf-8"></script>
-<script src="https://cdn.jsdelivr.net/gh/jmkuhns/flanker/jspsych-6-2/plugins/jspsych-html-keyboard-response.js" charset="utf-8"></script>
-<script src = "https://cdn.jsdelivr.net/gh/jmkuhns/flanker/jspsych-6-2/plugins/jspsych-image-keyboard-response.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jmkuhns/flanker/jspsych-6-2/css/jspsych.css">
-
 // Use JSDELIVR to get the files from a GitHub repository
 // https://cdn.jsdelivr.net/gh/<github-username>/<repository-name>/<specific folder or file>
 //var repo_site = "https://cdn.jsdelivr.net/gh/kywch/jsPsych-in-Qualtrics/flanker/ArrowFlankerBitmaps";
