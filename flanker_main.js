@@ -7,8 +7,9 @@
 
 // Use JSDELIVR to get the files from a GitHub repository
 // https://cdn.jsdelivr.net/gh/<github-username>/<repository-name>/<specific folder or file>
-var repo_site = "https://cdn.jsdelivr.net/gh/kywch/jsPsych-in-Qualtrics/flanker/ArrowFlankerBitmaps";
-
+//var repo_site = "https://cdn.jsdelivr.net/gh/kywch/jsPsych-in-Qualtrics/flanker/ArrowFlankerBitmaps";
+//var repo_site = "https://jmkuhns.github.io/flanker/";
+var flanker_bitmaps = "https://jmkuhns.github.io/flanker/ArrowFlankerBitmaps";
 
 /* experiment parameters */
 var reps_per_trial_type = 4;
@@ -30,7 +31,7 @@ var instructions = {
 
 
   stimulus: "<p>In this task, you will see five arrows on the screen, like the example below.</p>" +
-    "<img src='" + repo_site + "L.bmp'></img>" +
+    "<img src='" + flanker_bitmaps + "L.bmp'></img>" +
     "<p>Press the left arrow key if the middle arrow is pointing left. (<)</p>" +
     "<p>Press the right arrow key if the middle arrow is pointing right. (>)</p>" +
     "<p>Press any key to begin.</p>",
@@ -40,27 +41,27 @@ var instructions = {
 /*defining stimuli*/
 var test_stimuli = [
   {
-    stimulus: repo_site + "RH.bmp"
+    stimulus: flanker_bitmaps + "RH.bmp"
     data: { stim_type: 'congruent', direction: 'right'}
   },
   {
-    stimulus: repo_site + "LH.bmp",
+    stimulus: flanker_bitmaps + "LH.bmp",
     data: { stim_type: 'congruent', direction: 'left'}
   },
   {
-    stimulus: repo_site + "LRL.bmp",
+    stimulus: flanker_bitmaps + "LRL.bmp",
     data: { stim_type: 'incongruent', direction: 'right'}
   },
   {
-    stimulus: repo_site + "RLR.bmp",
+    stimulus: flanker_bitmaps + "RLR.bmp",
     data: { stim_type: 'incongruent', direction: 'left'}
   },
   {
-    stimulus: repo_site + "dotL.bmp",
+    stimulus: flanker_bitmaps + "dotL.bmp",
     data: { stim_type: 'neutral', direction: 'left'}
   },
   {
-    stimulus: repo_site + "dotR.bmp",
+    stimulus: flanker_bitmaps + "dotR.bmp",
     data: { stim_type: 'neutral', direction: 'right'}
   }
 ];
