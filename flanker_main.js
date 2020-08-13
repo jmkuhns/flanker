@@ -96,7 +96,7 @@ timeline.push(test);
 var debrief = {
   type: "html-keyboard-response",
   stimulus: function() {
-    var aggregate_data = console.log(jsPsych.data.get().json());
+    var aggregate_data = jsPsych.data.get();
     var total_trials = jsPsych.data.get().filter({trial_type: 'image-keyboard-response'}).count();
     var accuracy = Math.round(jsPsych.data.get().filter({correct: true}).count() / total_trials * 100);
     var congruent_rt = Math.round(jsPsych.data.get().filter({correct: true, stim_type: 'congruent'}).select('rt').mean());
@@ -104,8 +104,7 @@ var debrief = {
     return "<p>You responded correctly on <strong>"+accuracy+"%</strong> of the trials.</p> " +
     "<p>Your average response time for congruent trials was <strong>" + congruent_rt + "ms</strong>.</p>"+
     "<p>Your average response time for incongruent trials was <strong>" + incongruent_rt + "ms</strong>.</p>"+
-    "<p>Press any key to complete the experiment. Thank you!</p>" +
-    "<p> aggregated data in json format:" + aggregate_data;
+    "<p>Press any key to complete the experiment. Thank you!</p>"
   }
 };
 
