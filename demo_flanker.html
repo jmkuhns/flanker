@@ -80,15 +80,30 @@
         });
     }
 
+function saveData(name, data){
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'save_data.php'); // 'save_data.php'
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.send(JSON.stringify({
+    filename: name,
+    filedata: data
+  }));
+}
+
 
         /*start experiment*/
         jsPsych.init({
           timeline: timeline,
+          on_data_update: function(data){
+		    //  var trial_json_result = JSON.stringify(data);
+		    //      jatos.appendResultData(trial_json_results);
+	      //   },
           /* Change 1: Using `display_element` */
-          display_element: 'display_stage'
+          display_element: 'display_stage',
           on_finish: function () {
             jsPsych.data.displayData();
-            save_data_json();
+            saveData("experiment_data", jsPsych.data.get().json());
+      //    save_data_json();
           }
         });
     </script>
