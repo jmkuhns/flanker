@@ -62,22 +62,22 @@
     // must put save_data php url here
     save_url = "ftp://jmkuhns%2540psy.uncg.edu@psy.uncg.edu:115/public_html/exp_data/flanker/save_data.php";
     var data_dir = task_name;
-    
+
 
     // my preference is to include the task and sbj_id in the file name
     var file_name = task_name + '_' + sbj_id;
 
-    function save_data_csv() {
-    jQuery.ajax({
-        type: 'post',
-        cache: false,
-        url: save_url,
-        data: {
-            data_dir: data_dir,
-            file_name: file_name + '.csv', // the file type should be added
-            exp_data: jsPsych.data.get().csv()
-        }
-      });
+    function save_data_json() {
+        jQuery.ajax({
+            type: 'post',
+            cache: false,
+            url: save_url,
+            data: {
+                data_dir: data_dir,
+                file_name: file_name + '.json', // the file type should be added
+                exp_data: jsPsych.data.get().json()
+            }
+        });
     }
 
 
@@ -88,7 +88,7 @@
           display_element: 'display_stage'
           on_finish: function () {
             jsPsych.data.displayData();
-            save_data_csv();
+            save_data_json();
           }
         });
     </script>
