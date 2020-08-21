@@ -8,6 +8,8 @@
         <script src="https://jmkuhns.github.io/flanker/jspsych-6-2/plugins/jspsych-html-keyboard-response.js" charset="utf-8"></script>
         <link rel="stylesheet" href="https://jmkuhns.github.io/flanker/jspsych-6-2/css/jspsych.css">
         <script src="https://jmkuhns.github.io/flanker/flanker_main.js"></script>
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
+
 
     </head>
     <body>
@@ -60,6 +62,7 @@
     // must put save_data php url here
     save_url = "ftp://jmkuhns%2540psy.uncg.edu@psy.uncg.edu:115/public_html/exp_data/flanker/save_data.php";
     var data_dir = task_name;
+    
 
     // my preference is to include the task and sbj_id in the file name
     var file_name = task_name + '_' + sbj_id;
