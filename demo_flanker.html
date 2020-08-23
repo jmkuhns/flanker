@@ -57,11 +57,11 @@
     //experimental session defining variables
 
     var task_name = "flanker";
-    var sbj_id = "test01";
+    var sbj_id = "${e://Field/sub_id}";
 
     // must put save_data php url here
     save_url = "https://psy.uncg.edu/exp_data/save_data.php";
-    var data_dir = task_name + '/data';
+    var data_dir =  'flanker/data';
 
 
     // my preference is to include the task and sbj_id in the file name
@@ -94,15 +94,14 @@
         /*start experiment*/
         jsPsych.init({
           timeline: timeline,
-          on_data_update: function(data){
-		    //  var trial_json_result = JSON.stringify(data);
-		    //      jatos.appendResultData(trial_json_results);
-	      //   },
+          on_data_update: function(){
+  		            save_data_json();
+  	       },
           /* Change 1: Using `display_element` */
           display_element: 'display_stage',
           on_finish: function () {
-            jsPsych.data.displayData();
-            save_data_json("experiment_data", jsPsych.data.get().json());
+        //    jsPsych.data.displayData();
+            save_data_json();
       //    save_data_json();
           }
         });
