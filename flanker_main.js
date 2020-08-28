@@ -96,6 +96,9 @@ var test = {
 var test_practice = {
   timeline: [fixation, test],
   timeline_variables: test_stimuli,
+  data: {
+    task: "practice"
+  },
   sample: {
     type: 'fixed-repetitions',
     size: reps_per_practice
@@ -106,6 +109,9 @@ var test_practice = {
 var test_proc ={
   timeline: [fixation, test],
   timeline_variables: test_stimuli,
+  data: {
+    task: "main"
+  },
   sample: {
     type: 'fixed-repetitions',
     size: reps_per_trial_type
