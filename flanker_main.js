@@ -48,7 +48,7 @@ var fixation = {
                 },
       data: {test_part: 'fixation'}
     };
-    
+
 /*defining stimuli*/
 var test_stimuli = [
   {
@@ -96,13 +96,14 @@ var test = {
     }
   }],
   timeline_variables: [
+    fixation,
     test_stimuli
 ],
   sample: {type: 'fixed-repetitions', size: reps_per_trial_type}
 };
 
-var exp = [fixation, test];
-timeline.push(exp);
+//var exp = [fixation, ];
+timeline.push(test);
 
 /*defining debriefing block*/
 var debrief = {
