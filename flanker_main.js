@@ -7,7 +7,7 @@ var flanker_bitmaps = "https://jmkuhns.github.io/flanker/ArrowFlankersBitmaps/";
 
 // how many trials????????????????/
 /* experiment parameters */
-var reps_per_trial_type = 1;
+var reps_per_trial_type = 2;
 
 /*set up welcome block*/
 var welcome = {
@@ -38,17 +38,17 @@ var instructions2 = {
 timeline.push(instructions, instructions2);
 
 
-/*
+
 var fixation = {
       type: 'html-keyboard-response',
-      stimulus: '<div style="font-size:60px;">+</div>',
+      stimulus: '<div style="font-size:40px;">+</div>',
       choices: jsPsych.NO_KEYS,
       trial_duration: function() {
                     return Math.floor(Math.random() * 1500) + 500;
                 },
       data: {test_part: 'fixation'}
     };
-*/
+
 /*defining stimuli*/
 var test_stimuli = [
   {
@@ -77,36 +77,50 @@ var test_stimuli = [
   }
 ];
 
-/* defining test timeline */
+var test = {
+  type: "image-keyboard-response",
+  choices: [37, 39],
+  trial_duration: 1500,
+  stimulus: jsPsych.timelineVariable('stimulus'),
+  data: jsPsych.timelineVariable('data'),
+  on_finish: function(data){
+    var correct = false;
+    if(data.direction == 'left' &&  data.key_press == 37 && data.rt > -1){
+      correct = true;
+    } else if(data.direction == 'right' && data.key_press == 39 && data.rt > -1){
+      correct = true;
+    }
+    data.correct = correct;
+  }
+}
+
+var test_proc ={
+  timeline: [fixation, test],
+  timeline_variables: test_stimuli,
+  sample: {
+    type: 'fixed-repetitions',
+    size: reps_per_trial_type
+  }
+};
+
+/* defining test timeline
 var test = {
   timeline: [{
     type: 'image-keyboard-response',
     choices: [37, 39],
-    trial_duration: 1500,
+
     stimulus: jsPsych.timelineVariable('stimulus'),
     data: jsPsych.timelineVariable('data'),
-    on_finish: function(data){
-      var correct = false;
-      if(data.direction == 'left' &&  data.key_press == 37 && data.rt > -1){
-        correct = true;
-      } else if(data.direction == 'right' && data.key_press == 39 && data.rt > -1){
-        correct = true;
-      }
-      data.correct = correct;
-    }
+
   },
   post_trial_gap: function () {
     return Math.floor(Math.random() * 1500) + 500;
   }
 }],
-timeline_variables: test_stimuli,
-sample: {
-  type: 'fixed-repetitions',
-  size: reps_per_trial_type
-};
+;
+*/
 
-
-timeline.push(test);
+timeline.push(test_proc);
 
 /*defining debriefing block*/
 var debrief = {
