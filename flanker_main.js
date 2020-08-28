@@ -5,9 +5,9 @@
 var timeline = [];
 var flanker_bitmaps = "https://jmkuhns.github.io/flanker/ArrowFlankersBitmaps/";
 
-
+// how many trials????????????????/
 /* experiment parameters */
-var reps_per_trial_type = 4;
+var reps_per_trial_type = 1;
 
 /*set up welcome block*/
 var welcome = {
@@ -29,7 +29,7 @@ var instructions2 = {
   type: "html-keyboard-response",
   stimulus:
    "<p>In this task, you will see five arrows on the screen, like the example below.</p>" +
-    "<img src='https://jmkuhns.github.io/flanker/ArrowFlankersBitmaps/L.bmp'></img>" +
+    "<img src='https://jmkuhns.github.io/flanker/ArrowFlankersBitmaps/L.png'></img>" +
     "<p>Press the left arrow key if the middle arrow is pointing left. (<)</p>" +
     "<p>Press the right arrow key if the middle arrow is pointing right. (>)</p>" +
     "<p>Press any key to begin.</p>",
@@ -40,27 +40,27 @@ timeline.push(instructions, instructions2);
 /*defining stimuli*/
 var test_stimuli = [
   {
-    stimulus: flanker_bitmaps + "RH.bmp",
+    stimulus: flanker_bitmaps + "RH.png",
     data: { stim_type: 'congruent', direction: 'right'}
   },
   {
-    stimulus: flanker_bitmaps + "LH.bmp",
+    stimulus: flanker_bitmaps + "LH.png",
     data: { stim_type: 'congruent', direction: 'left'}
   },
   {
-    stimulus: flanker_bitmaps + "LRL.bmp",
+    stimulus: flanker_bitmaps + "LRL.png",
     data: { stim_type: 'incongruent', direction: 'right'}
   },
   {
-    stimulus: flanker_bitmaps + "RLR.bmp",
+    stimulus: flanker_bitmaps + "RLR.png",
     data: { stim_type: 'incongruent', direction: 'left'}
   },
   {
-    stimulus: flanker_bitmaps + "dotL.bmp",
+    stimulus: flanker_bitmaps + "dotL.png",
     data: { stim_type: 'neutral', direction: 'left'}
   },
   {
-    stimulus: flanker_bitmaps + "dotR.bmp",
+    stimulus: flanker_bitmaps + "dotR.png",
     data: { stim_type: 'neutral', direction: 'right'}
   }
 ];
