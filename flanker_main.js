@@ -46,9 +46,9 @@ var fixation = {
       trial_duration: function() {
                     return Math.floor(Math.random() * 1500) + 500;
                 },
-      post_trial_gap: 0,
       data: {test_part: 'fixation'}
-    }
+    };
+    
 /*defining stimuli*/
 var test_stimuli = [
   {
@@ -100,8 +100,9 @@ var test = {
 ],
   sample: {type: 'fixed-repetitions', size: reps_per_trial_type}
 };
-timeline.push(fixation,test);
 
+var exp = [fixation, test];
+timeline.push(exp);
 
 /*defining debriefing block*/
 var debrief = {
