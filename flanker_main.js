@@ -94,20 +94,21 @@ var test = {
       }
       data.correct = correct;
     }
-  }]
+  }],
+  timeline_variables: [
+    fixation,
+    test_stimuli
+  ],
+  sample: {type:
+    //'fixed-repetitions',
+    'alternate-groups',
+    groups:[[0], [1]], // 0 is fixation, 1 is test_stimuli...
+    randomize_group_order: false // the first trial will be an item from group 1
+    size: reps_per_trial_type}
 };
 
 
-var exp = {
-  timeline: [fixation, test],
-  timeline_variables:[
-    test_stimuli
-],
-    sample: {type: 'fixed-repetitions', size: reps_per_trial_type}
-}
-
-//var exp = [fixation, ];
-timeline.push(exp);
+timeline.push(test);
 
 /*defining debriefing block*/
 var debrief = {
