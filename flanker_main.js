@@ -38,17 +38,17 @@ var instructions2 = {
 timeline.push(instructions, instructions2);
 
 
-var isi = [
-  {type: 'html-keyboard-response',
-            stimulus: '+',
-            choices: jsPsych.NO_KEYS,
-            trial_duration: function() {
-                          return Math.floor(Math.random() * 1500) + 500;
-                      },
-  post_trial_gap: 0
-}
-];
 
+var fixation = {
+      type: 'html-keyboard-response',
+      stimulus: '<div style="font-size:60px;">+</div>',
+      choices: jsPsych.NO_KEYS,
+      trial_duration: function() {
+                    return Math.floor(Math.random() * 1500) + 500;
+                },
+      post_trial_gap: 0,
+      data: {test_part: 'fixation'}
+    }
 /*defining stimuli*/
 var test_stimuli = [
   {
@@ -100,7 +100,7 @@ var test = {
 ],
   sample: {type: 'fixed-repetitions', size: reps_per_trial_type}
 };
-timeline.push(isi,test);
+timeline.push(fixation,test);
 
 
 /*defining debriefing block*/
