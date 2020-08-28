@@ -94,16 +94,20 @@ var test = {
       }
       data.correct = correct;
     }
-  }],
-  timeline_variables: [
-    fixation,
-    test_stimuli
-],
-  sample: {type: 'fixed-repetitions', size: reps_per_trial_type}
+  }]
 };
 
+
+var exp = {
+  timeline: [fixation, test],
+  timeline_variables:[
+    test_stimuli
+],
+    sample: {type: 'fixed-repetitions', size: reps_per_trial_type}
+}
+
 //var exp = [fixation, ];
-timeline.push(test);
+timeline.push(exp);
 
 /*defining debriefing block*/
 var debrief = {
