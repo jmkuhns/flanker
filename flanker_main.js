@@ -18,7 +18,7 @@ var instructions = {
   "<p> In this task, there will be a plus sign (+) in the center of the screen.</p>"+
   "<p> It is very important that you try to keep your eyes on the plus sign throughout the experiment.</p>"+
   "<p> Your goal in this experiment is to decide which direction an arrow is pointing. <br> The arrows will appear above the plus sign.  However, you should still try not to move your eyes from the plus sign.</p>"+
-  "<p> Please press enter to continue </p>",
+  "<br><p>Please press any key to continue </p>",
   post_trial_gap: 1000
 };
 var instructions2 = {
