@@ -5,10 +5,6 @@
 var timeline = [];
 var flanker_bitmaps = "https://jmkuhns.github.io/flanker/ArrowFlankersBitmaps/";
 
-// how many trials????????????????/
-/* experiment parameters */
-var reps_per_trial_type = 2;
-
 /*set up welcome block*/
 var welcome = {
   type: "html-keyboard-response",
@@ -32,12 +28,15 @@ var instructions2 = {
     "<img src='https://jmkuhns.github.io/flanker/ArrowFlankersBitmaps/L.png'></img>" +
     "<p>Press the left arrow key if the middle arrow is pointing left. (<)</p>" +
     "<p>Press the right arrow key if the middle arrow is pointing right. (>)</p>" +
-    "<p>Press any key to begin.</p>",
+    "<p>Press any key to complete a practice block.</p>",
   post_trial_gap: 1000
 };
 timeline.push(instructions, instructions2);
 
-
+// how many trials????????????????/
+/* experiment parameters */
+var reps_per_practice = 10;
+var reps_per_trial_type = 80;
 
 var fixation = {
       type: 'html-keyboard-response',
@@ -94,6 +93,16 @@ var test = {
   }
 }
 
+var test_practice = {
+  timeline: [fixation, test],
+  timeline_variables: test_stimuli,
+  sample: {
+    type: 'fixed-repetitions',
+    size: reps_per_practice
+  }
+};
+
+
 var test_proc ={
   timeline: [fixation, test],
   timeline_variables: test_stimuli,
@@ -103,23 +112,24 @@ var test_proc ={
   }
 };
 
-/* defining test timeline
-var test = {
-  timeline: [{
-    type: 'image-keyboard-response',
-    choices: [37, 39],
 
-    stimulus: jsPsych.timelineVariable('stimulus'),
-    data: jsPsych.timelineVariable('data'),
-
-  },
-  post_trial_gap: function () {
-    return Math.floor(Math.random() * 1500) + 500;
+timeline.push(test_practice);
+var prac_debrief = {
+  type: "html-keyboard-response",
+  stimulus: function(){
+    var prac_trials = jsPsych.data.get().filter({
+      trial_type: 'image-keyboard-response'
+    }).count();
+    var prac_accuracy = Math.round(jsPsych.data.get().filter({correct: true}).count() / prac_trials * 100);
+    var prac_congruent_rt = Math.round(jsPsych.data.get().filter({correct: true, stim_type: 'congruent'}).select('rt').mean());
+    var prac_incongruent_rt = Math.round(jsPsych.data.get().filter({correct: true, stim_type: 'incongruent'}).select('rt').mean());
+    return "<p>You responded correctly on <strong>"+prac_accuracy+"%</strong> of the trials.</p> " +
+    "<p>Your average response time for congruent trials was <strong>" + prac_congruent_rt + "ms</strong>.</p>"+
+    "<p>Your average response time for incongruent trials was <strong>" + prac_incongruent_rt + "ms</strong>.</p>"+
+    "<br><p>You have now completed the practice trials. Press any key to begin the task.</p>"
   }
-}],
-;
-*/
-
+}
+timeline.push(prac_debrief);
 timeline.push(test_proc);
 
 /*defining debriefing block*/
