@@ -38,7 +38,7 @@ var instructions2 = {
 timeline.push(instructions, instructions2);
 
 
-
+/*
 var fixation = {
       type: 'html-keyboard-response',
       stimulus: '<div style="font-size:60px;">+</div>',
@@ -48,7 +48,7 @@ var fixation = {
                 },
       data: {test_part: 'fixation'}
     };
-
+*/
 /*defining stimuli*/
 var test_stimuli = [
   {
@@ -95,16 +95,14 @@ var test = {
       data.correct = correct;
     }
   }],
-  timeline_variables: [
-    fixation,
-    test_stimuli
-  ],
-  sample: {type:
-    //'fixed-repetitions',
-    'alternate-groups',
-    groups:[[0], [1]], // 0 is fixation, 1 is test_stimuli...
-    randomize_group_order: false // the first trial will be an item from group 1
-    size: reps_per_trial_type}
+  post_trial_gap: function () {
+    return Math.floor(Math.random() * 1500) + 500;
+  }
+}],
+timeline_variables: test_stimuli,
+sample: {
+  type: 'fixed-repetitions',
+  size: reps_per_trial_type
 };
 
 
