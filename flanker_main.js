@@ -44,9 +44,9 @@ var isi = [
             choices: jsPsych.NO_KEYS,
             trial_duration: function() {
                           return Math.floor(Math.random() * 1500) + 500;
-                      }
-                    },
+                      },
   post_trial_gap: 0
+}
 ];
 
 /*defining stimuli*/
