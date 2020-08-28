@@ -37,6 +37,18 @@ var instructions2 = {
 };
 timeline.push(instructions, instructions2);
 
+
+var isi = [
+  {type: 'html-keyboard-response',
+            stimulus: '+',
+            choices: jsPsych.NO_KEYS,
+            trial_duration: function() {
+                          return Math.floor(Math.random() * 1500) + 500;
+                      }
+                    },
+  post_trial_gap: 0
+];
+
 /*defining stimuli*/
 var test_stimuli = [
   {
@@ -81,15 +93,14 @@ var test = {
         correct = true;
       }
       data.correct = correct;
-    },
-    post_trial_gap: function() {
-        return Math.floor(Math.random() * 1500) + 500;
     }
   }],
-  timeline_variables: test_stimuli,
+  timeline_variables: [
+    test_stimuli
+],
   sample: {type: 'fixed-repetitions', size: reps_per_trial_type}
 };
-timeline.push(test);
+timeline.push(isi,test);
 
 
 /*defining debriefing block*/
