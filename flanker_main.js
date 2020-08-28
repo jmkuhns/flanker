@@ -28,7 +28,7 @@ var instructions2 = {
     "<img src='https://jmkuhns.github.io/flanker/ArrowFlankersBitmaps/L.png'></img>" +
     "<p>Press the left arrow key if the middle arrow is pointing left. (<)</p>" +
     "<p>Press the right arrow key if the middle arrow is pointing right. (>)</p>" +
-    "<p>Press any key to complete a practice block.</p>",
+    "<br><p>Press any key to complete a practice block.</p>",
   post_trial_gap: 1000
 };
 timeline.push(instructions, instructions2);
