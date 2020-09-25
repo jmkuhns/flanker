@@ -122,17 +122,7 @@ var test_proc ={
 timeline.push(test_practice);
 var prac_debrief = {
   type: "html-keyboard-response",
-  stimulus: function(){
-    var prac_trials = jsPsych.data.get().filter({
-      trial_type: 'image-keyboard-response'
-    }).count();
-    var prac_accuracy = Math.round(jsPsych.data.get().filter({correct: true}).count() / prac_trials * 100);
-    var prac_congruent_rt = Math.round(jsPsych.data.get().filter({correct: true, stim_type: 'congruent'}).select('rt').mean());
-    var prac_incongruent_rt = Math.round(jsPsych.data.get().filter({correct: true, stim_type: 'incongruent'}).select('rt').mean());
-    return "<p>You responded correctly on <strong>"+prac_accuracy+"%</strong> of the trials.</p> " +
-    "<p>Your average response time for congruent trials was <strong>" + prac_congruent_rt + "ms</strong>.</p>"+
-    "<p>Your average response time for incongruent trials was <strong>" + prac_incongruent_rt + "ms</strong>.</p>"+
-    "<br><p>You have now completed the practice trials. Press any key to begin the task.</p>"
+  stimulus: "<p>You have now completed the practice trials. Press any key to begin the task.</p>"
   }
 }
 timeline.push(prac_debrief);
