@@ -104,7 +104,11 @@ var test_practice = {
     size: reps_per_practice
   }
 };
-
+var prac_debrief = {
+  type: "html-keyboard-response",
+  stimulus: "<p>You have now completed the practice trials. Press any key to begin the task.</p>",
+  data: {exp_stage: "instructions"}
+}
 
 var test_proc ={
   timeline: [fixation, test],
@@ -120,10 +124,7 @@ var test_proc ={
 
 
 timeline.push(test_practice);
-var prac_debrief = {
-  type: "html-keyboard-response",
-  stimulus: "<p>You have now completed the practice trials. Press any key to begin the task.</p>"
-  }
+
 
 timeline.push(prac_debrief);
 timeline.push(test_proc);
@@ -131,9 +132,7 @@ timeline.push(test_proc);
 /*defining debriefing block*/
 var debrief = {
   type: "html-keyboard-response",
-  stimulus: function() {
-    "<p>Press any key to proceed to the next task. Thank you!</p>"
-  },
+  stimulus: "<p>Press any key to proceed to the next task. Thank you!</p>",
   data:{exp_stage: "instructions"}
 };
 
