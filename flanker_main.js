@@ -35,7 +35,7 @@ timeline.push(instructions, instructions2);
 
 // how many trials????????????????/
 /* experiment parameters */
-var reps_per_practice = 5; // 5 * 6 = 30
+var reps_per_practice = 1; // 5 * 6 = 30
 var reps_per_trial_type = 1; // 40 * 6 = 240
 
 var fixation = {
