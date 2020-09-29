@@ -124,7 +124,7 @@ var prac_debrief = {
   type: "html-keyboard-response",
   stimulus: "<p>You have now completed the practice trials. Press any key to begin the task.</p>"
   }
-}
+
 timeline.push(prac_debrief);
 timeline.push(test_proc);
 
