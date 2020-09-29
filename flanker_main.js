@@ -8,7 +8,7 @@ var flanker_bitmaps = "https://jmkuhns.github.io/flanker/ArrowFlankersBitmaps/";
 /*set up welcome block*/
 var welcome = {
   type: "html-keyboard-response",
-  stimulus: "Welcome to the experiment. Press any key to begin."
+  stimulus: "Welcome to the next task. Press any key to begin."
 };
 timeline.push(welcome);
 /*set up instructions block*/
