@@ -51,33 +51,33 @@ var fixation = {
 /*defining stimuli*/
 var test_stimuli = [
   {
-    stimulus: flanker_bitmaps + "RH.png",
+    stimulus: "<p> >>>>> </p>",
     data: { stim_type: 'congruent', direction: 'right'}
   },
   {
-    stimulus: flanker_bitmaps + "LH.png",
+    stimulus: "<p> <<<<< </p>"
     data: { stim_type: 'congruent', direction: 'left'}
   },
   {
-    stimulus: flanker_bitmaps + "LRL.png",
+    stimulus: "<p> <<><< </p>"
     data: { stim_type: 'incongruent', direction: 'right'}
   },
   {
-    stimulus: flanker_bitmaps + "RLR.png",
+    stimulus: "<p> >><>> </p>"
     data: { stim_type: 'incongruent', direction: 'left'}
   },
   {
-    stimulus: flanker_bitmaps + "dotL.png",
+    stimulus: "<p> ··<·· </p>"
     data: { stim_type: 'neutral', direction: 'left'}
   },
   {
-    stimulus: flanker_bitmaps + "dotR.png",
+    stimulus: "<p> ··>·· </p>"
     data: { stim_type: 'neutral', direction: 'right'}
   }
 ];
 
 var test = {
-  type: "image-keyboard-response",
+  type: "html-keyboard-response",
   choices: [37, 39],
   trial_duration: 1500,
   stimulus: jsPsych.timelineVariable('stimulus'),
