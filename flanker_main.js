@@ -19,7 +19,7 @@ var instructions = {
   "<p> It is very important that you try to keep your eyes on the plus sign throughout the experiment.</p>"+
   "<p> Your goal in this experiment is to decide which direction an arrow is pointing. <br> The arrows will appear above the plus sign.  However, you should still try not to move your eyes from the plus sign.</p>"+
   "<br><p>Please press any key to continue </p>",
-  post_trial_gap: 1000
+  post_trial_gap: 250
 };
 var instructions2 = {
   type: "html-keyboard-response",
@@ -29,7 +29,7 @@ var instructions2 = {
     "<p>Press the left arrow key if the middle arrow is pointing left. (<)</p>" +
     "<p>Press the right arrow key if the middle arrow is pointing right. (>)</p>" +
     "<br><p>Press any key to complete a practice block.</p>",
-  post_trial_gap: 1000
+  post_trial_gap: 250
 };
 timeline.push(instructions, instructions2);
 
