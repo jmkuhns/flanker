@@ -55,23 +55,23 @@ var test_stimuli = [
     data: { stim_type: 'congruent', direction: 'right'}
   },
   {
-    stimulus: "<p> <<<<< </p>"
+    stimulus: "<p> <<<<< </p>",
     data: { stim_type: 'congruent', direction: 'left'}
   },
   {
-    stimulus: "<p> <<><< </p>"
+    stimulus: "<p> <<><< </p>",
     data: { stim_type: 'incongruent', direction: 'right'}
   },
   {
-    stimulus: "<p> >><>> </p>"
+    stimulus: "<p> >><>> </p>",
     data: { stim_type: 'incongruent', direction: 'left'}
   },
   {
-    stimulus: "<p> ··<·· </p>"
+    stimulus: "<p> ··<·· </p>",
     data: { stim_type: 'neutral', direction: 'left'}
   },
   {
-    stimulus: "<p> ··>·· </p>"
+    stimulus: "<p> ··>·· </p>",
     data: { stim_type: 'neutral', direction: 'right'}
   }
 ];
