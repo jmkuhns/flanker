@@ -35,17 +35,17 @@ timeline.push(instructions, instructions2);
 
 // how many trials????????????????/
 /* experiment parameters */
-var reps_per_practice = 5; // 5 * 6 = 30
-var reps_per_trial_type = 40; // 40 * 6 = 240
+var reps_per_practice = 2; // 2 * 6 = 12
+var reps_per_trial_type = 18; // 18 * 6 = 108, 108 * 30 * 6
 
 var fixation = {
       type: 'html-keyboard-response',
       stimulus: '<div style="font-size:40px;">+</div>',
       choices: jsPsych.NO_KEYS,
       trial_duration: function() {
-                    return Math.floor(Math.random() * 1500) + 500;
+                    return Math.floor(Math.random() * 750) + 500;
                 },
-      data: {test_part: 'fixation'}
+      data: {exp_stage: 'fixation'}
     };
 
 /*defining stimuli*/
@@ -97,7 +97,7 @@ var test_practice = {
   timeline: [fixation, test],
   timeline_variables: test_stimuli,
   data: {
-    task: "practice"
+    exp_stage: "practice"
   },
   sample: {
     type: 'fixed-repetitions',
@@ -114,10 +114,10 @@ var test_proc ={
   timeline: [fixation, test],
   timeline_variables: test_stimuli,
   data: {
-    task: "main"
+    exp_stage: "flanker"
   },
   sample: {
-    type: 'fixed-repetitions',
+    type: 'fixed-repetitions', // Repeat each item in the timeline variables size times, in a random order
     size: reps_per_trial_type
   }
 };
