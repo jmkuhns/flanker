@@ -52,27 +52,27 @@ var fixation = {
 var test_stimuli = [
   {
     stimulus: "<p 'font-size: 24px'> >>>>> </p>",
-    data: { stim_type: 'congruent', direction: 'right'}
+    data: {exp_stage: 'trial' , stim_type: 'congruent', direction: 'right'}
   },
   {
     stimulus: "<p 'font-size: 24px'> <<<<< </p>",
-    data: { stim_type: 'congruent', direction: 'left'}
+    data: {exp_stage: 'trial' ,  stim_type: 'congruent', direction: 'left'}
   },
   {
     stimulus: "<p 'font-size: 24px'> <<><< </p>",
-    data: { stim_type: 'incongruent', direction: 'right'}
+    data: {exp_stage: 'trial' ,  stim_type: 'incongruent', direction: 'right'}
   },
   {
     stimulus: "<p 'font-size: 24px'> >><>> </p>",
-    data: { stim_type: 'incongruent', direction: 'left'}
+    data: {exp_stage: 'trial' ,  stim_type: 'incongruent', direction: 'left'}
   },
   {
     stimulus: "<p 'font-size: 24px'> ··<·· </p>",
-    data: { stim_type: 'neutral', direction: 'left'}
+    data: {exp_stage: 'trial' ,  stim_type: 'neutral', direction: 'left'}
   },
   {
     stimulus: "<p 'font-size: 24px'> ··>·· </p>",
-    data: { stim_type: 'neutral', direction: 'right'}
+    data: {exp_stage: 'trial' ,  stim_type: 'neutral', direction: 'right'}
   }
 ];
 
