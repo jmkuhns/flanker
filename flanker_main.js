@@ -67,11 +67,11 @@ var test_stimuli = [
     data: {exp_stage: 'trial' ,  stim_type: 'incongruent', direction: 'left'}
   },
   {
-    stimulus: "<p 'font-size: 24px'> ··<·· </p>",
+    stimulus: "<p 'font-size: 24px'> · · < · · </p>",
     data: {exp_stage: 'trial' ,  stim_type: 'neutral', direction: 'left'}
   },
   {
-    stimulus: "<p 'font-size: 24px'> ··>·· </p>",
+    stimulus: "<p 'font-size: 24px'> · · > · · </p>",
     data: {exp_stage: 'trial' ,  stim_type: 'neutral', direction: 'right'}
   }
 ];
