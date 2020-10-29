@@ -35,8 +35,8 @@ timeline.push(instructions, instructions2);
 
 // how many trials????????????????/
 /* experiment parameters */
-var reps_per_practice = 2; // 2 * 6 = 12
-var reps_per_trial_type = 18; // 18 * 6 = 108, 108 * 30 * 6
+var reps_per_practice = 1; // 1 * 6 = 6
+var reps_per_trial_type = 9; // 9 * 6 = 54
 
 var fixation = {
       type: 'html-keyboard-response',
