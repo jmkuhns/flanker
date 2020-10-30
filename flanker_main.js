@@ -25,7 +25,7 @@ var instructions2 = {
   type: "html-keyboard-response",
   stimulus:
    "<p>In this task, you will see five arrows on the screen, like the example below.</p><br>" +
-   "<p 'font-size: 24px'> < </p><br>" +
+   "<p 'font-size: 36px'> < </p><br>" +
     "<p>Press the left arrow key if the middle arrow is pointing left. (<)</p>" +
     "<p>Press the right arrow key if the middle arrow is pointing right. (>)</p>" +
     "<br><p>Press any key to complete a practice block.</p>",
