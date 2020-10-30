@@ -51,27 +51,27 @@ var fixation = {
 /*defining stimuli*/
 var test_stimuli = [
   {
-    stimulus: "<p 'font-size: 24px'> >>>>> </p>",
+    stimulus: "<p 'font-size: 36px'> >>>>> </p>",
     data: {exp_stage: 'trial' , stim_type: 'congruent', direction: 'right'}
   },
   {
-    stimulus: "<p 'font-size: 24px'> <<<<< </p>",
+    stimulus: "<p 'font-size: 36px'> <<<<< </p>",
     data: {exp_stage: 'trial' ,  stim_type: 'congruent', direction: 'left'}
   },
   {
-    stimulus: "<p 'font-size: 24px'> <<><< </p>",
+    stimulus: "<p 'font-size: 36px'> <<><< </p>",
     data: {exp_stage: 'trial' ,  stim_type: 'incongruent', direction: 'right'}
   },
   {
-    stimulus: "<p 'font-size: 24px'> >><>> </p>",
+    stimulus: "<p 'font-size: 36px'> >><>> </p>",
     data: {exp_stage: 'trial' ,  stim_type: 'incongruent', direction: 'left'}
   },
   {
-    stimulus: "<p 'font-size: 24px'> · · < · · </p>",
+    stimulus: "<p 'font-size: 36px'> · · < · · </p>",
     data: {exp_stage: 'trial' ,  stim_type: 'neutral', direction: 'left'}
   },
   {
-    stimulus: "<p 'font-size: 24px'> · · > · · </p>",
+    stimulus: "<p 'font-size: 36px'> · · > · · </p>",
     data: {exp_stage: 'trial' ,  stim_type: 'neutral', direction: 'right'}
   }
 ];
