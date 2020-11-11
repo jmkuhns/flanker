@@ -8,14 +8,15 @@ var flanker_bitmaps = "https://jmkuhns.github.io/flanker/ArrowFlankersBitmaps/";
 /*set up welcome block*/
 var welcome = {
   type: "html-keyboard-response",
-  stimulus: "Welcome to the next task. Press any key to begin."
+  stimulus: "Welcome to the Flanker task. Press any key to begin."
 };
 timeline.push(welcome);
 /*set up instructions block*/
 var instructions = {
   type: "html-keyboard-response",
   stimulus:
-  "<p> In this task, there will be a plus sign (+) in the center of the screen.</p>"+
+  '<p style:"font-size:30px">FLANKER TASK</p>' +
+  '<br><br><p><p> In this task, there will be a plus sign (+) in the center of the screen.</p>''+
   "<p> It is very important that you try to keep your eyes on the plus sign throughout the experiment.</p>"+
   "<p> Your goal in this experiment is to decide which direction an arrow is pointing. <br> The arrows will appear above the plus sign.  However, you should still try not to move your eyes from the plus sign.</p>"+
   "<br><p>Please press any key to continue </p>",
