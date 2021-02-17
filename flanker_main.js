@@ -3,7 +3,7 @@
 //var repo_site = "https://cdn.jsdelivr.net/gh/kywch/jsPsych-in-Qualtrics/flanker/ArrowFlankerBitmaps";
 //var repo_site = "https://jmkuhns.github.io/flanker/";
 var timeline = [];
-var flanker_bitmaps = "https://jmkuhns.github.io/flanker/ArrowFlankersBitmaps/";
+// var flanker_bitmaps = "https://jmkuhns.github.io/flanker/ArrowFlankersBitmaps/";
 
 /*set up welcome block*/
 var welcome = {
