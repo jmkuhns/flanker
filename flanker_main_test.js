@@ -128,7 +128,7 @@ timeline.push(test_practice);
 
 
 timeline.push(prac_debrief);
-timeline.push(test_proc);
+//timeline.push(test_proc);
 
 /*defining debriefing block*/
 var debrief = {
